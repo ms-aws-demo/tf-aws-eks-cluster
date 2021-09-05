@@ -1,5 +1,5 @@
 variable "eks_node_type" {
-  default = "t2.nano"
+  default = "t3a.small"
 }
 
 variable "region" {
