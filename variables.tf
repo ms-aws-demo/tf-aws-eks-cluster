@@ -9,7 +9,6 @@ variable "region" {
 
 variable "terraform_user_arn" {
   default = "arn:aws:iam::184521843984:user/ms-aws-demo-tf"
-  #default = "arn:aws:iam::184521843984:role/aws-service-role/eks.amazonaws.com/AWSServiceRoleForAmazonEKS"
 }
 
 variable "aws_auth_additional_labels" {

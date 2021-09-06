@@ -21,3 +21,14 @@ resource "kubernetes_namespace" "nginx-sites" {
     name = "nginx-sites"
   }
 }
+
+resource "kubernetes_namespace" "aws-observability" {
+  metadata {
+
+    labels = {
+      mylabel = "aws-observability"
+    }
+
+    name = "aws-observability"
+  }
+}
