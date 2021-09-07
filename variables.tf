@@ -7,8 +7,16 @@ variable "region" {
   description = "AWS region"
 }
 
+variable "admin_user_arn" {
+  default = "arn:aws:iam::184521843984:user/ms-admin-user"
+}
+
 variable "terraform_user_arn" {
   default = "arn:aws:iam::184521843984:user/ms-aws-demo-tf"
+}
+
+variable "cyderes_user_arn" {
+  default = "arn:aws:iam::184521843984:user/cyderes-user"
 }
 
 variable "aws_auth_additional_labels" {
@@ -59,5 +67,16 @@ variable "map_users" {
       username = "ms-admin-user"
       groups   = ["system:masters"]
     },
+    {
+      userarn  = "arn:aws:iam::184521843984:user/ms-aws-demo-tf"
+      username = "ms-aws-demo-tf"
+      groups   = ["system:masters"]
+    },
+        {
+      userarn  = "arn:aws:iam::184521843984:user/cyderes-user"
+      username = "cyderes-user"
+      groups   = ["system:masters"]
+    },
+    
   ]
 }

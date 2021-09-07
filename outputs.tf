@@ -33,7 +33,17 @@ output "cluster_name" {
   value       = local.cluster_name
 }
 
+output "admin_user_arn" {
+  description = "AWS admin user"
+  value = var.admin_user_arn
+}
+
 output "terraform_user_arn" {
   description = "AWS user for Terraform operations"
   value = var.terraform_user_arn
+}
+
+output "cyderes_user_arn" {
+  description = "AWS Cyderes user for Terraform operations"
+  value = var.cyderes_user_arn
 }

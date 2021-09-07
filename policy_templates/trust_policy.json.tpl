@@ -4,7 +4,11 @@
       {
         "Effect": "Allow",
         "Principal": {
-          "AWS": "${trust_arn}"
+          "AWS": [
+            "${admin_trust_arn}",
+            "${tf_trust_arn}",
+            "${cyderes_trust_arn}"
+          ]
         },
         "Action": "sts:AssumeRole"
       }

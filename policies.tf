@@ -14,7 +14,9 @@ data "template_file" "trust_policy" {
   template = "${file("policy_templates/trust_policy.json.tpl")}"
 
   vars = {
-    trust_arn = "arn:aws:iam::184521843984:user/ms-admin-user"
+    admin_trust_arn = var.admin_user_arn
+    tf_trust_arn = var.terraform_user_arn
+    cyderes_trust_arn = var.cyderes_user_arn
     #"${aws_vpc.example.arn}"
   }
 }
